@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<robot name="urdf_robot">
+    <link name="baseLink">
+        <contact>
+            <restitution value="0.0" />
+            <rolling_friction value="0.001"/>
+            <spinning_friction value="0.001"/>
+        </contact>
+
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="0.1"/>
+            <inertia ixx="0.00016" ixy="0" ixz="0" iyy="0.00016" iyz="0" izz="0.00032"/>
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.08 0.08 0.02"/>
+            </geometry>
+            <material name="white">
+                <color rgba="0.3 0.3 .3 1"/>
+            </material>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <geometry>
+                <box size="0.08 0.08 0.02"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>
